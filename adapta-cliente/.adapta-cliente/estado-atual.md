@@ -1,16 +1,16 @@
 # Estado atual — Adapta Cliente
 
-- task_id: T-F2-007 (estender auditoria, matriz de alçadas e fail-closed às superfícies da Fase 2 — SPEC-2-004, onda 7)
+- task_id: T-F2-008 (demonstrar rollback transversal, fila de pendências e exportação da trilha — SPEC-2-004, onda 8, última da fase)
 - champion: Fábio
 - spec: 04_fase-atual/specs/spec-2-004-governanca-calculadora.md
-- etapa: concluida
-- autorizacao_implementacao: confirmada (2026-10-23, formulário "Aprovar tudo como recomendado": matriz semente com as regras já decididas · só por papel por enquanto · plano aprovado)
-- teste_humano: aprovado (champion 23/10: Parte A OK; Parte B retestada após debug v0.0.151 — "Funcionou, já estou editando esse pedido"; emenda da lista v0.0.152 aprovada por formulário e implementada; aceite final "Pode seguir")
-- verificacao_automatica: passou (TDD CP-F2-010/011 via API: matriz 7/7, eventos nomeados ativos, fail-closed evidenciado na auditoria, negativas auditadas; regressão trilha/RLS OK; revalidação de encerramento 7/7 PASS; QA Skip completo OK v0.0.147–152; relatório 05_entregas/T-F2-007-auditoria-alcadas-fail-closed.md)
-- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-23-0905-normalizacao-registros-legados.md
-- ultima_acao: T-F2-007 CONCLUÍDA (aceite do champion "Pode seguir" 23/10; revalidação de encerramento 7/7 PASS; fase.md [x]; STATUS 7/8 87,5%; versão de prova do reteste marcada LIMPEZA-PROVA-tf2007)
-- proxima_acao: nenhuma na task — T-F2-008 (rollback transversal, fila de pendências e exportação CSV; última da fase) aguarda pedido de análise do champion
-- atualizado_em: 2026-10-23T09:05:00-03:00
+- etapa: aguardando_teste_humano
+- autorizacao_implementacao: confirmada (2026-10-23, "Sim" do champion = plano como recomendado: rollback em composição+investimento+produtos · CSV sem ator_nome · 3 blocos + demonstração)
+- teste_humano: pendente (roteiro entregue 23/10: seção Pendências + CSV no Catálogo + rollback na trilha)
+- verificacao_automatica: passou (TDD CP-F2-012 via API: parte B 15/15 PASS — rollback preço trilha/68,25, rollback investimento gestor com recibo, rollback composição reverte exceção, negativas claras, fila 2 itens com dono/motivo, CSV sanitizado 70 eventos, zero vigentes duplicadas; QA Skip completo OK v0.0.154–161; achado corrigido: 9 vigentes duplicadas na trilha do 125231 → agora 1)
+- aprendizado: pendente (triagem silenciosa antes de fechar)
+- ultima_acao: T-F2-008 IMPLEMENTADA v0.0.153–161 (rollback transversal + fila de pendências + exportação CSV sanitizada + seção no Catálogo; TDD parte B 15/15; achado corrigido: vigentes duplicadas na trilha)
+- proxima_acao: teste humano do champion (roteiro entregue) + aceite para concluir a T-F2-008 e a Fase 2
+- atualizado_em: 2026-10-23T10:30:00-03:00
 
 ---
 ## Decisão do champion — exceção (20/10, teste T-F2-006)
