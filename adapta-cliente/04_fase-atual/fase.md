@@ -1,4 +1,4 @@
-# Fase 2 — Tarefas
+# Fase 3 — Tarefas
 
 <!-- fase-format:2 -->
 
@@ -12,15 +12,15 @@ campo não estiver aqui, ele não tem como ser preenchido, porque é este arquiv
     - [ ] sub-subtarefa (indente mais 2)                             <!-- id:… -->
 ```
 
-| marcador | o que define | se você não escrever |
-|---|---|---|
-| `- [ ]` / `- [/]` / `- [x]` | a fazer / em andamento / concluída | a fazer |
-| `@nome` | responsável (`@"Nome Composto"` com aspas) | fica **sem responsável** |
-| `!dd/mm/aaaa` | prazo | fica **sem prazo** |
-| `#projeto` / `#aculturamento` | tipo | Projeto de IA |
-| `[interno]` | o cliente **não** vê esta tarefa | o cliente vê |
-| `> texto` na linha de baixo | descrição (aparece ao abrir o card) | sem descrição |
-| indentar 2 espaços | vira subtarefa da tarefa acima (vale em qualquer profundidade) | tarefa de topo |
+| marcador | legenda | o que define | se você não escrever |
+|---|---|---|---|
+| `- [ ]` / `- [/]` / `- [x]` | | a fazer / em andamento / concluída | a fazer |
+| `@nome` | | responsável (`@"Nome Composto"` com aspas) | fica **sem responsável** |
+| `!dd/mm/aaaa` | | prazo | fica **sem prazo** |
+| `#projeto` / `#aculturamento` | | tipo | Projeto de IA |
+| `[interno]` | | o cliente **não** vê esta tarefa | o cliente vê |
+| `> texto` na linha de baixo | | descrição (aparece ao abrir o card) | sem descrição |
+| indentar 2 espaços | | vira subtarefa da tarefa acima (vale em qualquer profundidade) | tarefa de topo |
 
 Os marcadores só valem **no fim da linha** — `Revisar #3 do contrato` continua sendo um título.
 Um título que TERMINA na forma de um marcador sai escapado com `\\` (`Ligar para \\@joao`); a barra é
@@ -29,21 +29,21 @@ Marque `[x]` para concluir e adicione linhas novas à vontade: elas entram no qu
 sincronização e voltam aqui com o `<!-- id:… -->` preenchido. **Não apague o marcador de id** das
 tarefas que já têm um.
 
-- [x] Definir fonte oficial, linha piloto e modelar o cadastro governado de produtos @Fábio !07/10/2026  <!-- id:76c41319-7f1f-4b52-a374-698df786c7ef -->
-  > Task T-F2-001 (SPEC-2-001, onda 1, única elegível). Modelar a coleção `produtos` com RLS, trilha de versão e exclusão bloqueada; cadastrar a linha piloto com fonte, vigência e responsável. Insumo embutido (responder dentro da task): qual é a fonte oficial do catálogo (ERP, Excel controlado ou cadastro governado) e qual linha/produto piloto migrar primeiro? Pendências nomeadas em campo ausente; item sem fonte/aprovação nunca visível ao vendedor. Prova: TDD GREEN com CP-F2-001. Evidência: exportação da coleção + capturas + decisão registrada.
-- [x] Migrar e reconciliar a linha piloto, com higiene de duplicatas e emenda do toast @Fábio !09/10/2026  <!-- id:d7a75d81-3432-45a1-8256-2036e736e4a5 -->
-  > Task T-F2-002 (SPEC-2-001, onda 2, após T-F2-001). Migrar a linha piloto com inventário e reconciliação item a item contra a fonte declarada; duplicata legada 20260921-0003 marcada como LIMPEZA-PROVA (esconde da lista, mantém histórico — aceite D4 do handoff); emenda de UX: duração do toast de confirmação ~12s (aceite D3). Duplicidade de SKU bloqueada; substituição com trilha `substituido_por`. Prova: TDD REGRESSÃO com CP-F2-002/003. Evidência: relatório de reconciliação + aceite do champion. **Concluída em 2026-10-14:** 104 itens migrados e aprovados (todas as linhas — emenda AC-010), reconciliação 104/104, correções das considerações do champion (ID/SKU numéricos, botão Editar, nomes originais, linhas realocadas, ID real na Industrialização), revalidação de encerramento 6/6, aceite "Testei o ID de industrialização e funcionou. Também testei o Catálogo e ele está correto."
-- [x] Configurar composição, conversão e cálculo de lote @Fábio !13/10/2026  <!-- id:21ba44a4-e679-46fc-bf01-232146f0ba75 -->
-  > Task T-F2-003 (SPEC-2-002, onda 3, após T-F2-001). Linhas de composição vinculadas ao pedido da Fase 1 com RLS; conversão com a fórmula cadastrada; comparação com lote mínimo mostrando diferença e quantidade sugerida. Insumo embutido (responder dentro da task): fórmulas de conversão/densidade por produto e precedência entre 1.000 unidades/SKU × mínimo em kg. Sem densidade/fórmula, linha fica `nao_calculavel` com pendência nomeada — nunca viável, nunca trava as demais. Prova: TDD GREEN com CP-F2-004. Evidência: exportação da composição + capturas.
-- [x] Exercitar mínimo, precedência, exceções e linhas não calculáveis @Fábio !15/10/2026  <!-- id:5d366136-682a-4d03-8b7d-cf7fb76a9d84 -->
-  > Task T-F2-004 (SPEC-2-002, onda 4, após T-F2-003). Exercitar quantidade abaixo do mínimo (sugestão + ajuste com motivo auditado), conflito de precedência (regra aplicada exibida; sem regra, `revisao_necessaria`) e linha inválida sem contaminar as demais. Prova: TDD REGRESSÃO com CP-F2-005/006. Evidência: relatório de cenários + aceite do vendedor/técnico.
-- [ ] Revisar as evidências e decidir o fechamento da Fase 2 @"Felipe Navaar" !31/10/2026 #aculturamento  <!-- id:ac32fc45-6869-4b75-ad7b-e7002cf6498c -->
-  > Revisão do consultor: conferir evidências e aceites das 8 tasks, validar as decisões D1 (fórmula de acurácia — segue para a Fase 3) e D2 (meta/tolerância do baseline) do handoff da Fase 1 e decidir o fechamento formal da Fase 2 com gate de transição para a Fase 3.
-- [x] Configurar cálculo de investimento, componentes e comparação com política @Fábio !20/10/2026  <!-- id:177754f9-5663-48bb-b8a0-beadb589432e -->
-  > Task T-F2-005 (SPEC-2-003, onda 5, após T-F2-003). Total por linha e por projeto com componentes separados (formulação, embalagem, frete, tributos, taxas, margem) e incluído/excluído/pendente explícito; comparação com a política de qualificação/investimento mostrando a regra usada. Insumo embutido (responder dentro da task): componentes e regras de custo, política de preço/piso e semântica dos limiares. Fonte divergente → `revisao_de_preco` preservando a versão anterior. Prova: TDD GREEN com CP-F2-007. Evidência: exportação do cálculo + capturas.
-- [x] Exercitar duas aprovações, exceções e rollback de preço @Fábio !22/10/2026  <!-- id:755bc95e-b364-419b-9d98-3725bbcd0404 -->
-  > Task T-F2-006 (SPEC-2-003, onda 6, após T-F2-005). Alteração de preço com duas aprovações, histórico, vigência e rollback; preço sem as duas aprovações permanece indisponível para consumo (prova negativa); exceção com motivo, responsável e alçada; negativa auditada com motivo do servidor. Prova: TDD REGRESSÃO com CP-F2-008/009. Evidência: trilha de preço + relatório de cenários + aceite do gestor/Financeiro. **Concluída em 2026-10-23:** aceite do champion "Testei e está aprovado" (Partes A–D OK 22/10; Parte E esclarecida — exceção da trilha = preço de tabela com alçada admin; exceção POR PEDIDO fica p/ política I6) + emendas de usabilidade v0.0.145 aprovadas (busca inteligente, ordenador multi-campo, seletor pesquisável); revalidação de encerramento TDD 22/22 PASS contra o sistema real.
-- [x] Estender auditoria, matriz de alçadas e fail-closed às superfícies da Fase 2 @Fábio !27/10/2026  <!-- id:99f2fa5d-79e6-4392-a6d0-dcf204f590a2 -->
-  > Task T-F2-007 (SPEC-2-004, onda 7, após T-F2-005). Hooks de auditoria cobrindo catálogo, composição, investimento e preço (ator, papel, antes→depois, motivo, versão, resultado); vendedor negado com motivo do servidor; ação sem alçada definida negada por padrão (fail-closed). Insumo embutido (responder dentro da task): matriz nominal de alçadas da Fase 2 — quem aprova preço, exceção e migração. Prova: TDD GREEN com CP-F2-010/011. Evidência: eventos de auditoria + relatório de negativas.
-- [x] Demonstrar rollback transversal, fila de pendências e exportação da trilha @Fábio !29/10/2026  <!-- id:0ea54893-fcb7-4260-a464-c676f59ca8c6 -->
-  > Task T-F2-008 (SPEC-2-004, onda 8, após T-F2-007). Rollback de qualquer objeto da Fase 2 restaurando a última versão aprovada com recibo e zero vigentes duplicadas; fila de pendências da calculadora com dono e motivo; exportação CSV da trilha sanitizada. Handoff ao champion com demonstração ponta a ponta da calculadora. Prova: TDD REGRESSÃO com CP-F2-012 + handoff. Evidência: recibo de rollback + CSV + aceite do champion. **Concluída em 2026-10-26:** aceite do champion "Deu certo" após teste completo (itens 1–4: Pendências visíveis com 2 itens reais, CSV avaliado e aprovado pelo champion, rollback na trilha com motivo na própria linha — emenda v0.0.164, vendedor sem acesso); revalidação de encerramento 18/18 PASS contra o sistema real; achado corrigido: 9 vigentes duplicadas na trilha → 1 (migration 0031).
+- [ ] Definir conteúdo aprovado: estrutura da proposta e do folder, fontes e donos @Fábio !03/11/2026  <!-- id:f3a1c2d4-0001-4a01-9a01-000000000001 -->
+  > Task T-F3-001 (SPEC-3-001, onda 1, única elegível). Modelar a coleção `conteudos` com RLS, trilha de versão e exclusão bloqueada (padrão Fase 2): proposta e folder como documentos versionados, cada bloco com fonte, vigência e responsável. Insumo embutido (responder dentro da task): quais blocos compõem a proposta (capa, entendimento, escopo, investimento, condições) e do folder (linhas, produtos, alegações), quem aprova cada bloco e qual fonte oficial alimenta cada um. Conteúdo sem fonte/vigência/aprovação nunca visível ao vendedor (padrão RN-2.002). Prova: TDD GREEN com CP-F3-001. Evidência: exportação da coleção + capturas + decisão registrada.
+- [ ] Migrar e aprovar o conteúdo piloto, com pendências nomeadas @Fábio !05/11/2026  <!-- id:f3a1c2d4-0002-4a01-9a01-000000000002 -->
+  > Task T-F3-002 (SPEC-3-001, onda 2, após T-F3-001). Migrar o conteúdo real (texto da proposta e do folder) com inventário e reconciliação item a item contra as fontes declaradas; aprovar bloco a bloco com ator, data, versão e motivo; pendências nomeadas por bloco incompleto — nada usado em silêncio. Prova: TDD REGRESSÃO com CP-F3-002/003. Evidência: relatório de reconciliação + aceite do champion.
+- [ ] Montar a proposta a partir do catálogo aprovado @Fábio !10/11/2026  <!-- id:f3a1c2d4-0003-4a01-9a01-000000000003 -->
+  > Task T-F3-003 (SPEC-3-002, onda 3, após T-F3-002). Gerar a proposta a partir do pedido da Fase 1 + catálogo aprovado + motor de investimento da Fase 2: blocos de conteúdo aprovado preenchidos automaticamente, tabela de produtos do pedido com preços vigentes, investimento com componentes separados, condições e validade. Proposta nasce `rascunho`, nunca enviável antes da revisão do vendedor. Prova: TDD GREEN com CP-F3-004. Evidência: exportação da proposta + capturas.
+- [ ] Exercitar revisão, versão e rollback da proposta @Fábio !12/11/2026  <!-- id:f3a1c2d4-0004-4a01-9a01-000000000004 -->
+  > Task T-F3-004 (SPEC-3-002, onda 4, após T-F3-003). Editar proposta em rascunho com trilha de versão (nova versão ao editar, anterior "Substituído pela proposta X" — padrão Fase 1); revisão do vendedor obrigatória antes de enviar; rollback para a última versão aprovada com recibo auditado. Prova: TDD REGRESSÃO com CP-F3-005/006. Evidência: relatório de cenários + aceite do vendedor.
+- [ ] Montar o folder com blocos aprovados e versão @Fábio !17/11/2026  <!-- id:f3a1c2d4-0005-4a01-9a01-000000000005 -->
+  > Task T-F3-005 (SPEC-3-003, onda 5, após T-F3-002). Gerar o folder a partir dos blocos de conteúdo aprovado: linhas, produtos e alegações somente com fonte e vigência válidas; versão do folder registrada com trilha; conteúdo vencido fica pendência, nunca entra em silêncio. Prova: TDD GREEN com CP-F3-007. Evidência: exportação do folder + capturas.
+- [ ] Exercitar envio com registro, auditoria e recuperação @Fábio !19/11/2026  <!-- id:f3a1c2d4-0006-4a01-9a01-000000000006 -->
+  > Task T-F3-006 (SPEC-3-004, onda 6, após T-F3-003 e T-F3-005). Enviar proposta/folder com registro do ato (ator, papel, data, destinatário, versão enviada), auditoria server-side, negativa de envio de versão não aprovada (prova negativa), reenvio idempotente e recuperação após falha (tentativa preservada, reconciliação visível — padrão T-F1-008). Prova: TDD REGRESSÃO com CP-F3-008/009. Evidência: relatório de cenários + aceite do gestor.
+- [ ] Estender auditoria, alçadas e fail-closed às superfícies da Fase 3 @Fábio !24/11/2026  <!-- id:f3a1c2d4-0007-4a01-9a01-000000000007 -->
+  > Task T-F3-007 (SPEC-3-004, onda 7, após T-F3-006). Hooks de auditoria cobrindo conteúdo, proposta e folder (ator, papel, antes→depois, motivo, versão, resultado); vendedor negado com motivo do servidor; ação sem alçada definida negada por padrão (fail-closed — padrão T-F2-007). Insumo embutido: alçadas de aprovar conteúdo, enviar proposta e reenviar. Prova: TDD GREEN com CP-F3-010/011. Evidência: eventos de auditoria + relatório de negativas.
+- [ ] Demonstrar o fluxo ponta a ponta e fechar a Fase 3 @Fábio !26/11/2026  <!-- id:f3a1c2d4-0008-4a01-9a01-000000000008 -->
+  > Task T-F3-008 (SPEC-3-004, onda 8, após T-F3-007). Demonstração ponta a ponta: pedido da Fase 1 → proposta montada → revisão → envio com registro → folder com blocos aprovados; fila de pendências de conteúdo com dono e motivo; exportação CSV da trilha (padrão T-F2-008). Handoff ao champion. Prova: TDD REGRESSÃO com CP-F3-012 + handoff. Evidência: recibo de rollback + CSV + aceite do champion.
+- [ ] Revisar as evidências e decidir o fechamento da Fase 3 @"Ramon Pádua" !30/11/2026 #aculturamento  <!-- id:f3a1c2d4-0009-4a01-9a01-000000000009 -->
+  > Revisão do consultor: conferir evidências e aceites das 8 tasks, validar as decisões do handoff da Fase 2 e decidir o fechamento formal da Fase 3 com gate de transição para a Fase 4.
