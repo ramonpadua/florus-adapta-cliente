@@ -1,21 +1,28 @@
 # Estado atual — Adapta Cliente
 
-- task_id: T-F2-008 (demonstrar rollback transversal, fila de pendências e exportação da trilha — SPEC-2-004, onda 8, última da fase)
+- task_id: T-F3-001 (definir conteúdo aprovado: estrutura da proposta e do folder, fontes e donos — SPEC-3-001, onda 1, única elegível)
 - champion: Fábio
-- spec: 04_fase-atual/specs/spec-2-004-governanca-calculadora.md
-- etapa: concluida
-- autorizacao_implementacao: confirmada (2026-10-23, "Sim" do champion = plano como recomendado: rollback em composição+investimento+produtos · CSV sem ator_nome · 3 blocos + demonstração)
-- teste_humano: aprovado (2026-10-26, "Deu certo" do champion após teste completo dos 4 itens: Pendências visíveis com 2 itens reais, CSV avaliado e aprovado, rollback na trilha com motivo na própria linha, vendedor sem acesso)
-- verificacao_automatica: passou (revalidação de encerramento 18/18 PASS do zero contra o sistema real v0.0.164 — rollback preço/investimento/composição com recibo e 1 vigente; fila com dono/motivo e provas fora; CSV sanitizado; vendedor 403; TDD parte B 15/15; QA Skip completo OK)
-- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-26-1555.md (ação que exige campo abre o campo junto ao botão; rota custom usa pb.baseUrl)
-- ultima_acao: T-F2-008 CONCLUÍDA (aceite "Deu certo" 26/10; revalidação 18/18; fase.md [x]; STATUS 8/8 100%; changelog v20)
-- proxima_acao: nenhuma task ativa — Fase 2 completa 8/8; fechamento formal após revisão do consultor (task própria, prazo 31/10)
-- atualizado_em: 2026-10-26T15:55:00-03:00
+- spec: 04_fase-atual/specs/spec-3-001-conteudo-aprovado.md
+- etapa: a_fazer
+- autorizacao_implementacao: pendente (aguardando "Sim" do champion na task T-F3-001)
+- teste_humano: pendente (gate do champion ao fim da task)
+- verificacao_automatica: pendente (TDD CP-F3-001 na execução)
+- aprendizado: n/a — transição de fase registrada no changelog v21/v22
+- ultima_acao: FASE 2 FECHADA FORMALMENTE + FASE 3 LIBERADA (26/10) — revisão do consultor concluída (8/8 evidências e aceites conferidos; D1/D2 já aprovadas pelo champion 02/10); Fase 2 arquivada em 05_entregas/fase-2/ com manifesto e check; fase.md da Fase 3 com 9 tasks e 4 SPECs publicadas; STATUS 0/9; changelog v21/v22.
+- proxima_acao: champion executa T-F3-001 (estrutura de blocos da proposta/folder, fontes e donos — insumo embutido na task; prazo 03/11)
+- atualizado_em: 2026-10-26T18:05:00-03:00
 
 ---
-## Decisão do champion — exceção (20/10, teste T-F2-006)
-- A "exceção" da trilha de preço = alteração de preço com alçada do admin (efeito: muda o preco_kg para todos). TRILHA COMO ESTÁ.
-- Exceção de piso POR PEDIDO (vender abaixo do piso num projeto específico sem tocar o catálogo): entra junto com a política de investimento I6 quando cadastrada — bloco Investimento já tem o estado `excecao` previsto; motivo do vendedor + aprovação do admin (D3).
+## Fechamento da Fase 2 (26/10)
+- Revisão do consultor (Ramon Pádua): 8/8 evidências e aceites conferidos no repositório; D1/D2 do handoff da Fase 1 já aprovadas pelo champion (02/10); check-fase-2.md assinado com active-sha256=8dde9b94f42953c2581aec9ead1852c03e7c37596062593a75b6f513f556fbdf.
+- Evoluções candidatas ADIADAS: política de faturamento mínimo (pode ser criada depois; comparação segue em revisao_de_preco) e exceção de piso POR PEDIDO (entra com a política I6). Exceção da trilha segue como alteração com alçada do admin.
+- Fase 2 arquivada em 05_entregas/fase-2/ (fase.md, 4 SPECs, README, manifesto adapta-phase-closure/v1 e check).
+
+---
+## Pendências herdadas da Fase 2
+- Política de faturamento mínimo: SEM política cadastrada → comparação nasce em revisao_de_preco (I6).
+- Exceção de piso POR PEDIDO: entra junto com a política I6; estado `excecao` já previsto no bloco Investimento; motivo do vendedor + aprovação do admin (D3).
+- Exceção da trilha de preço = alteração de preço com alçada do admin (efeito: muda o preco_kg para todos). TRILHA COMO ESTÁ.
 
 ---
 ## Insumos do champion (T-F2-005)

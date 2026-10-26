@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "adapta-phase-closure/v1",
+  "phase": 2,
+  "closedAt": "2026-10-26T21:00:00.000Z",
+  "activeDigest": "8dde9b94f42953c2581aec9ead1852c03e7c37596062593a75b6f513f556fbdf",
+  "files": [
+    {
+      "relative": "README.md",
+      "sha256": "b6ccf67e2c83d6fdcc599796a94fcf1f5469b213e607b9c4aa67b8e5921f13bf"
+    },
+    {
+      "relative": "check-fase-2.md",
+      "sha256": "97a13c79801d79ab59d00c3ade7baee80c6c6ea0f0d9ce69212002f682d8f772"
+    },
+    {
+      "relative": "fase.md",
+      "sha256": "f1af9496e3c08808a7df0599df7a6341df49a8419f355b715b621a1012545012"
+    },
+    {
+      "relative": "specs/spec-2-001-cadastro-governado.md",
+      "sha256": "fc96e82ff9f06702d62c5fd8dc31d2ceb788c655d768c39ee1d30dc792c59605"
+    },
+    {
+      "relative": "specs/spec-2-002-composicao-lote.md",
+      "sha256": "ca5f73d096a43707ac7163b2ab354c331550addea6bebe47ed7a70f612c83c6a"
+    },
+    {
+      "relative": "specs/spec-2-003-investimento-preco.md",
+      "sha256": "9619fe21c776ae0e7e71be01932cb5bcde68bac9ee2259766e921c02b2d45105"
+    },
+    {
+      "relative": "specs/spec-2-004-governanca-calculadora.md",
+      "sha256": "662c608316c8f3e27338ad9306f3334d52deb318ae8bfce86b0f3e03918ab432"
+    }
+  ],
+  "checkSha256": "97a13c79801d79ab59d00c3ade7baee80c6c6ea0f0d9ce69212002f682d8f772",
+  "manifestDrift": [
+    {
+      "path": "04_fase-atual/fase.md",
+      "status": "alterado-desde-manifesto",
+      "manifestSha256": "457b453a82fc20c5ec3f412338a5f1e955a811e7f76bcd6fec3e7aca90e85cd8",
+      "currentSha256": "f1af9496e3c08808a7df0599df7a6341df49a8419f355b715b621a1012545012"
+    }
+  ]
+}

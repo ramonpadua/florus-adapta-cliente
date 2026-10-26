@@ -14,9 +14,9 @@
 
 | Fase | Entrega (em uma linha) | Status |
 |---|---|---|
-| 1 | Entrada estruturada, pedido/orçamento, pipe, tags, dashboard, RLS e baseline inicial | Aberta |
-| 2 | Cadastro governado, migração piloto e calculadora de viabilidade | Planejada |
-| 3 | Proposta, folder, conteúdo aprovado, versão e envio | Planejada |
+| 1 | Entrada estruturada, pedido/orçamento, pipe, tags, dashboard, RLS e baseline inicial | Fechada (2026-10-02) |
+| 2 | Cadastro governado, migração piloto e calculadora de viabilidade | Fechada (2026-10-26) |
+| 3 | Proposta, folder, conteúdo aprovado, versão e envio | Aberta (liberada 2026-10-26) |
 | 4 | Follow-up, amostras, cobrança, aceite e handoffs com loops candidatos | Planejada |
 | 5 | Fechamento, governança, métricas, go-live e validação ponta a ponta | Planejada |
 
