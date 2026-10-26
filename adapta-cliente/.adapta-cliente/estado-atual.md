@@ -3,14 +3,14 @@
 - task_id: T-F2-008 (demonstrar rollback transversal, fila de pendências e exportação da trilha — SPEC-2-004, onda 8, última da fase)
 - champion: Fábio
 - spec: 04_fase-atual/specs/spec-2-004-governanca-calculadora.md
-- etapa: aguardando_teste_humano
+- etapa: concluida
 - autorizacao_implementacao: confirmada (2026-10-23, "Sim" do champion = plano como recomendado: rollback em composição+investimento+produtos · CSV sem ator_nome · 3 blocos + demonstração)
-- teste_humano: pendente (itens 1–3 aprovados pelo champion 26/10: Pendências visíveis, CSV avaliado e aprovado, rollback "Deu certo"; falta item 4: vendedor não vê Pendências/CSV)
-- verificacao_automatica: passou (TDD CP-F2-012 via API: parte B 15/15 PASS — rollback preço trilha/68,25, rollback investimento gestor com recibo, rollback composição reverte exceção, negativas claras, fila 2 itens com dono/motivo, CSV sanitizado 70 eventos, zero vigentes duplicadas; QA Skip completo OK v0.0.154–161; achado corrigido: 9 vigentes duplicadas na trilha do 125231 → agora 1)
-- aprendizado: pendente (triagem silenciosa antes de fechar)
-- ultima_acao: FIX v0.0.162 (fila/CSV usam pb.baseUrl — fetch relativo caía no estático) + EMENDA v0.0.163–164 autorizada (campo de motivo NA PRÓPRIA LINHA do Rollback/Rejeitar, painel fixo removido; provado na tela)
-- proxima_acao: item 4 do teste (vendedor não vê Pendências/CSV) + aceite para concluir a T-F2-008 e a Fase 2
-- atualizado_em: 2026-10-26T13:50:00-03:00
+- teste_humano: aprovado (2026-10-26, "Deu certo" do champion após teste completo dos 4 itens: Pendências visíveis com 2 itens reais, CSV avaliado e aprovado, rollback na trilha com motivo na própria linha, vendedor sem acesso)
+- verificacao_automatica: passou (revalidação de encerramento 18/18 PASS do zero contra o sistema real v0.0.164 — rollback preço/investimento/composição com recibo e 1 vigente; fila com dono/motivo e provas fora; CSV sanitizado; vendedor 403; TDD parte B 15/15; QA Skip completo OK)
+- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-26-1555.md (ação que exige campo abre o campo junto ao botão; rota custom usa pb.baseUrl)
+- ultima_acao: T-F2-008 CONCLUÍDA (aceite "Deu certo" 26/10; revalidação 18/18; fase.md [x]; STATUS 8/8 100%; changelog v20)
+- proxima_acao: nenhuma task ativa — Fase 2 completa 8/8; fechamento formal após revisão do consultor (task própria, prazo 31/10)
+- atualizado_em: 2026-10-26T15:55:00-03:00
 
 ---
 ## Decisão do champion — exceção (20/10, teste T-F2-006)
