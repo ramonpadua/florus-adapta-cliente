@@ -85,13 +85,13 @@ Um responsável cadastra (ou importa) a linha piloto com fonte e vigência, o si
 - [ ] **CA-2-003:** item sem fonte ou com vigência vencida gera pendência explícita e mantém a última versão aprovada válida.
 - [ ] **CA-2-004:** divergência entre fontes abre reconciliação registrada; nenhuma versão é escolhida em silêncio.
 - [ ] **CA-2-005:** duplicidade de SKU é bloqueada; substituição preserva histórico com `substituido_por`.
-- [ ] **CA-2-006:** migração piloto reconciliada com relatório item a item e aceite do champion antes de expandir.
+- **CA-2-006:** migração piloto reconciliada com relatório item a item e aceite do champion antes de expandir.
 
 ## TDD da SPEC
 
 | Etapa | Prova | Comando/ação | Resultado esperado | Evidência |
 |---|---|---|---|---|
-| RED | Consultar preço hoje | Perguntar ao vendedor o preço/kg e a fonte de um produto qualquer | Preço vive em planilha/Word sem fonte e sem versão — registrar a lacuna | Roteiro/captura |
+| RED | Consultar preço hoje | Perguntar ao vendedor o preço/kg e a fonte de um produto da linha piloto | Resposta depende da pessoa; sem fonte/vigência rastreável — registrar a lacuna | Roteiro/captura do processo atual |
 | GREEN | Cadastrar linha piloto com massa CP-F2-001 | Cadastrar 3 produtos completos + 1 sem densidade + 1 com vigência vencida | 3 aprovados visíveis; 2 com pendências nomeadas; `produto_id` e trilha gerados | Exportação da coleção + capturas |
 | REFACTOR/REGRESSÃO | Repetir com SKU duplicado, fonte divergente e edição de item aprovado | Tentar duplicar, divergir e editar | Duplicidade bloqueada; divergência em pendência; edição gera nova versão com trilha | Relatório de cenários |
 
