@@ -5,12 +5,12 @@
 - spec: 04_fase-atual/specs/spec-2-004-governanca-calculadora.md
 - etapa: aguardando_teste_humano
 - autorizacao_implementacao: confirmada (2026-10-23, "Sim" do champion = plano como recomendado: rollback em composição+investimento+produtos · CSV sem ator_nome · 3 blocos + demonstração)
-- teste_humano: pendente (roteiro entregue 23/10: seção Pendências + CSV no Catálogo + rollback na trilha)
+- teste_humano: pendente (itens 1–3 aprovados pelo champion 26/10: Pendências visíveis, CSV avaliado e aprovado, rollback "Deu certo"; falta item 4: vendedor não vê Pendências/CSV)
 - verificacao_automatica: passou (TDD CP-F2-012 via API: parte B 15/15 PASS — rollback preço trilha/68,25, rollback investimento gestor com recibo, rollback composição reverte exceção, negativas claras, fila 2 itens com dono/motivo, CSV sanitizado 70 eventos, zero vigentes duplicadas; QA Skip completo OK v0.0.154–161; achado corrigido: 9 vigentes duplicadas na trilha do 125231 → agora 1)
 - aprendizado: pendente (triagem silenciosa antes de fechar)
-- ultima_acao: T-F2-008 IMPLEMENTADA v0.0.153–161 (rollback transversal + fila de pendências + exportação CSV sanitizada + seção no Catálogo; TDD parte B 15/15; achado corrigido: vigentes duplicadas na trilha)
-- proxima_acao: teste humano do champion (roteiro entregue) + aceite para concluir a T-F2-008 e a Fase 2
-- atualizado_em: 2026-10-23T10:30:00-03:00
+- ultima_acao: FIX v0.0.162 (fila/CSV usam pb.baseUrl — fetch relativo caía no estático) + EMENDA v0.0.163–164 autorizada (campo de motivo NA PRÓPRIA LINHA do Rollback/Rejeitar, painel fixo removido; provado na tela)
+- proxima_acao: item 4 do teste (vendedor não vê Pendências/CSV) + aceite para concluir a T-F2-008 e a Fase 2
+- atualizado_em: 2026-10-26T13:50:00-03:00
 
 ---
 ## Decisão do champion — exceção (20/10, teste T-F2-006)
