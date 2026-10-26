@@ -85,7 +85,7 @@ Um responsável cadastra (ou importa) a linha piloto com fonte e vigência, o si
 - [ ] **CA-2-003:** item sem fonte ou com vigência vencida gera pendência explícita e mantém a última versão aprovada válida.
 - [ ] **CA-2-004:** divergência entre fontes abre reconciliação registrada; nenhuma versão é escolhida em silêncio.
 - [ ] **CA-2-005:** duplicidade de SKU é bloqueada; substituição preserva histórico com `substituido_por`.
-- **CA-2-006:** migração piloto reconciliada com relatório item a item e aceite do champion antes de expandir.
+- [ ] **CA-2-006:** migração piloto reconciliada com relatório item a item e aceite do champion antes de expandir.
 
 ## TDD da SPEC
 
