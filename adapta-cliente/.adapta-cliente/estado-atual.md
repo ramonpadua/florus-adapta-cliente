@@ -3,20 +3,28 @@
 - task_id: T-F3-001 (definir conteúdo aprovado: estrutura da proposta e do folder, fontes e donos — SPEC-3-001, onda 1, única elegível)
 - champion: Fábio
 - spec: 04_fase-atual/specs/spec-3-001-conteudo-aprovado.md
-- etapa: a_fazer
-- autorizacao_implementacao: pendente (aguardando "Sim" do champion na task T-F3-001)
-- teste_humano: pendente (gate do champion ao fim da task)
-- verificacao_automatica: pendente (TDD CP-F3-001 na execução)
-- aprendizado: n/a — transição de fase registrada no changelog v21/v22
-- ultima_acao: FASE 2 FECHADA FORMALMENTE + FASE 3 LIBERADA (26/10) — revisão do consultor concluída (8/8 evidências e aceites conferidos; D1/D2 já aprovadas pelo champion 02/10); Fase 2 arquivada em 05_entregas/fase-2/ com manifesto e check; fase.md da Fase 3 com 9 tasks e 4 SPECs publicadas; STATUS 0/9; changelog v21/v22.
-- proxima_acao: champion executa T-F3-001 (estrutura de blocos da proposta/folder, fontes e donos — insumo embutido na task; prazo 03/11)
-- atualizado_em: 2026-10-26T18:05:00-03:00
+- etapa: aguardando_teste_humano
+- autorizacao_implementacao: confirmada (2026-10-28, formulário "Enviar respostas": "Sim, implementar o plano" + 6 blocos da proposta + 5 blocos do folder + gestor/admin aprova todos os blocos + três fontes declaradas por bloco)
+- teste_humano: pendente (gate do champion — roteiro entregue em 2026-10-28)
+- verificacao_automatica: passou (TDD CP-F3-001/002/003 — 32/32 PASS contra v0.0.166; QA Skip OK v0.0.165-167; prova na tela admin/vendedor na v0.0.167)
+- aprendizado: pendente (triagem ao concluir)
+- ultima_acao: T-F3-001 IMPLEMENTADA (v0.0.165-167) — coleção `conteudos` (migration 0032) + semente dos 11 blocos (0033) + hook validacao_conteudos.js + lib/conteudos.ts + tela Conteúdos; achado corrigido (versão nova aprovada no create não substituía a anterior); TDD 32/32 PASS; relatório 05_entregas/T-F3-001-conteudo-aprovado.md
+- proxima_acao: teste humano do champion (roteiro de 5 itens) para concluir a T-F3-001
+- atualizado_em: 2026-10-28T11:40:00-03:00
 
 ---
 ## Fechamento da Fase 2 (26/10)
 - Revisão do consultor (Ramon Pádua): 8/8 evidências e aceites conferidos no repositório; D1/D2 do handoff da Fase 1 já aprovadas pelo champion (02/10); check-fase-2.md assinado com active-sha256=8dde9b94f42953c2581aec9ead1852c03e7c37596062593a75b6f513f556fbdf.
 - Evoluções candidatas ADIADAS: política de faturamento mínimo (pode ser criada depois; comparação segue em revisao_de_preco) e exceção de piso POR PEDIDO (entra com a política I6). Exceção da trilha segue como alteração com alçada do admin.
 - Fase 2 arquivada em 05_entregas/fase-2/ (fase.md, 4 SPECs, README, manifesto adapta-phase-closure/v1 e check).
+
+---
+## Decisões do champion — T-F3-001 (28/10, formulário de autorização)
+- Estrutura aprovada: **6 blocos de proposta** (capa · entendimento · escopo · investimento · condições · próximos passos) e **5 blocos de folder** (capa/identidade · linhas · produtos em destaque · alegações · contato).
+- **Gestor/admin aprova todos os blocos** (mesma regra do catálogo da Fase 2); dono do texto registrado no bloco.
+- **Três fontes declaradas por bloco:** documentos comerciais vigentes da Florus · catálogo governado (produtos aprovados) · Regulatório/ANVISA (alegações).
+- Vigência padrão **31/12/2026**, editável por bloco.
+- Expansão para novos blocos só entra após novo aceite do champion (SPEC-3-001, item 6).
 
 ---
 ## Pendências herdadas da Fase 2
@@ -68,7 +76,7 @@
 
 ---
 ## Análise T-F1-011 (resumo para retomada)
-- Critérios: CA-1-019 e CA-1-021. Implementado: camada de validação em src/lib/baseline.ts + seção "Qualidade dos dados" no RelatorioBaseline.tsx. TDD em scripts/tf1011-tdd.py. Debug v0.0.78: chave `contraditorios` não inicializada.
+- Critérios: CA-1-019 e CA-1-021. Implementado: camada de validação em src/lib/baseline.ts + seção "Qualidade dos dados" em RelatorioBaseline.tsx. TDD em scripts/tf1011-tdd.py. Debug v0.0.78: chave `contraditorios` não inicializada.
 
 ---
 ## Histórico — T-F1-010 (concluída em 2026-09-27)
