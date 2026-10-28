@@ -3,14 +3,14 @@
 - task_id: T-F3-001 (definir conteúdo aprovado: estrutura da proposta e do folder, fontes e donos — SPEC-3-001, onda 1, única elegível)
 - champion: Fábio
 - spec: 04_fase-atual/specs/spec-3-001-conteudo-aprovado.md
-- etapa: aguardando_teste_humano
+- etapa: concluida
 - autorizacao_implementacao: confirmada (2026-10-28, formulário "Enviar respostas": "Sim, implementar o plano" + 6 blocos da proposta + 5 blocos do folder + gestor/admin aprova todos os blocos + três fontes declaradas por bloco)
-- teste_humano: pendente (gate do champion — roteiro entregue em 2026-10-28)
-- verificacao_automatica: passou (TDD CP-F3-001/002/003 — 32/32 PASS contra v0.0.166; QA Skip OK v0.0.165-167; prova na tela admin/vendedor na v0.0.167)
-- aprendizado: pendente (triagem ao concluir)
-- ultima_acao: T-F3-001 IMPLEMENTADA (v0.0.165-167) — coleção `conteudos` (migration 0032) + semente dos 11 blocos (0033) + hook validacao_conteudos.js + lib/conteudos.ts + tela Conteúdos; achado corrigido (versão nova aprovada no create não substituía a anterior); TDD 32/32 PASS; relatório 05_entregas/T-F3-001-conteudo-aprovado.md
-- proxima_acao: teste humano do champion (roteiro de 5 itens) para concluir a T-F3-001
-- atualizado_em: 2026-10-28T11:40:00-03:00
+- teste_humano: aprovado com 2 considerações (2026-10-28: "Concluí o teste e tudo deu certo, com 2 considerações" — falta de mensagem visível de bloco aprovado e ausência de selo de cor); emenda autorizada no formulário ("Aplicar as duas correções e depois concluir")
+- verificacao_automatica: passou (TDD CP-F3-001/002/003 32/32 PASS na v0.0.166; QA Skip completo OK em v0.0.165, 166, 168, 169, 170 e 171; prova na tela admin/vendedor: selo verde aprovado + confirmação na linha "✓ Rascunho salvo" + vendedor vê 1 item)
+- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-28-1600-estado-aprovado-no-create.md
+- ultima_acao: T-F3-001 CONCLUÍDA (28/10) — aceite do champion "Concluí o teste e tudo deu certo" + emenda v0.0.170–171 aplicada e provada na tela (selo com cor semântica; confirmação na própria linha com título correto); limpeza dos registros de prova; fase.md [x]; STATUS 1/9; changelog v24
+- proxima_acao: aguardar o champion pedir a próxima task (T-F3-002 — migrar e aprovar o conteúdo piloto, prazo 05/11)
+- atualizado_em: 2026-10-28T16:05:00-03:00
 
 ---
 ## Fechamento da Fase 2 (26/10)
@@ -36,60 +36,36 @@
 ## Insumos do champion (T-F2-005)
 - I5 componentes = formulação (custo da Cotação) + Anvisa + serviços adicionais da tabela jan-2025 (Lacre 0,60 · Montagem caixa 2,50 · Rotulagem 0,60 · Celofane 1,00), cada um com nome, valor e impacto — transparência para vendedor e cliente
 - ANVISA = UMA VEZ POR PRODUTO (correção do champion 20/10): R$ 450,00 por produto na tabela jan-2025, nunca diluído por quantidade; serviços adicionais SIM por unidade
-- Emenda 20/10 (autorizada): a Cotação grava mao_de_obra e anvisa (por produto) no item ao confirmar a seleção (v0.0.142, provado na tela — rascunho 0002 gravou MO '4' e anvisa '450')
+- Emenda 20/10 (autorizada): a Cotação grava mao_de_obra e anvisa (por produto) no item ao confirmar a seleção (v0.0.142, provado na tela)
 - I6 ainda SEM política cadastrada → comparação nasce em revisao_de_preco
 - I7 responsável por componentes e política = Fábio (admin)
 
 ---
 ## Decisões do champion (T-F2-002)
 - I1 fonte oficial: Tabela jan-2025 (a planilha que alimenta a Cotação)
-- I2 EMENDA AC-010: migrar TODAS as linhas de uma vez ("não vejo sentido em fazer isso em fases") — fim do conceito de linha piloto
+- I2 EMENDA AC-010: migrar TODAS as linhas de uma vez — fim do conceito de linha piloto
 - I3 responsável por produto/preço: Fábio (admin)
-- I4 periodicidade: anual como padrão, mas a vigência por item (campo de validade do custo) manda — tabela jan-2025 não tem coluna de validade, então vigência padrão 31/12/2026 editável por item
+- I4 vigência anual como padrão, mas a vigência por item manda — vigência padrão 31/12/2026 editável por item
 - Industrialização e Serviços de Acabamento: parâmetros de custo (não migram como produtos)
-- Considerações 14/10 (21:00): ID/SKU só números (máscara separadora num passo futuro); botão Editar nos itens vigentes; nomes como na tabela original; categoria Outros extinta (11 itens realocados)
-- Considerações 14/10 (22:00): ID da linha de Industrialização = ID real da tabela (MO do tipo: perfume 13650, body splash 13651, aromatizador 13652) — fim do rótulo IND-
+- Considerações 14/10: ID/SKU só números; botão Editar nos itens vigentes; nomes como na tabela original; categoria Outros extinta
+- ID da linha de Industrialização = ID real da tabela (13650/13651/13652)
 
 ---
 ## Análise T-F2-001 (resumo para retomada)
-- Critérios: CA-2-001 (cadastro gera produto_id único com estado), CA-2-002 (campo mínimo ausente → pendente_aprovacao com pendência nomeada, nunca visível ao vendedor), CA-2-003 (sem fonte/vigência vencida → pendência explícita, última versão aprovada mantida).
-- Recorte entregue: migration 0015 criando coleção `produtos` (produto_id, nome, linha, SKU, unidade, densidade opcional, preco_kg, lote_minimo, taxas, fonte, vigência, status rascunho/pendente_aprovacao/aprovado/substituido, versao, substituido_por, responsável) com RLS (vendedor lê só aprovados; gestor/admin tudo; exclusão bloqueada) + hook de auditoria/validação + tela de cadastro/consulta + TDD CP-F2-001.
-- Emenda "Linhas e Fontes" (v0.0.101–104): coleção dominios (migration 0016) + semente (0017: 10 linhas jan-2025 + 4 fontes), hook validacao_dominios, tela ListaDominios (incluir/alterar/desativar), Linha/Fonte como Select no Catálogo.
+- Critérios: CA-2-001, CA-2-002 e CA-2-003 (produto_id único com estado, pendência nomeada nunca visível ao vendedor, fonte/vigência explícitas).
+- Recorte entregue: migration 0015 `produtos` (RLS vendedor só aprovados; gestor/admin tudo; exclusão bloqueada) + hook de auditoria/validação + tela de cadastro/consulta + TDD CP-F2-001.
+- Emenda "Linhas e Fontes" (v0.0.101–104): coleção dominios (0016) + semente (0017), hook validacao_dominios, tela ListaDominios.
 - Não alterar: Cotação (trava 16/09), campos travados do pedido (trava 26/08), coleções da Fase 1 (exceto leitura).
-- Padrões reutilizados da Fase 1: RLS por papel, auditoria server-side, hooks JSVM inline, exclusão negada (retenção), estados + substituido_por.
+- Padrões reutilizados: RLS por papel, auditoria server-side, hooks JSVM inline, exclusão negada (retenção), estados + substituido_por.
 
 ---
 ## Histórico — T-F2-006 (concluída em 2026-10-23)
-- v0.0.143 (coleção trilha_preco 0025 + hook fail-closed + seção no Catálogo); testes A–D OK 22/10; Parte E esclarecida (exceção da trilha = preço de tabela com alçada admin; exceção POR PEDIDO fica p/ I6); emendas de usabilidade v0.0.144–145 aprovadas; revalidação de encerramento TDD 22/22 PASS; aceite "Testei e está aprovado" 23/10; relatório 05_entregas/T-F2-006-trilha-preco-cenarios.md.
+- v0.0.143 (trilha_preco 0025 + hook fail-closed + seção no Catálogo); emendas de usabilidade v0.0.144–145; revalidação 22/22 PASS; aceite "Testei e está aprovado"; relatório 05_entregas/T-F2-006-trilha-preco-cenarios.md.
 
 ---
 ## Histórico — T-F2-004 (concluída em 2026-10-19)
-- TDD REGRESSÃO 24/24 PASS contra o motor v0.0.137 + aceite do champion ("Funcionou — pode concluir"); relatório 05_entregas/T-F2-004-cenarios.md; achado p/ T-F2-007: UPDATE sem evento na auditoria central.
+- TDD REGRESSÃO 24/24 PASS + aceite do champion; relatório 05_entregas/T-F2-004-cenarios.md.
 
 ---
-## Histórico — T-F1-012 (concluída em 2026-09-29)
-- implementada v0.0.88–89; aprovada pelo champion; emenda toast 12s v0.0.90; D1/D2 aplicadas ao relatório em v0.0.91.
-
----
-## Histórico — T-F1-009 (concluída em 2026-09-29)
-- implementada v0.0.79–80; debugs v0.0.81–82; emendas v0.0.83–87; prova do consultor 01/10 (11/11 PASS).
-
----
-## Análise T-F1-011 (resumo para retomada)
-- Critérios: CA-1-019 e CA-1-021. Implementado: camada de validação em src/lib/baseline.ts + seção "Qualidade dos dados" em RelatorioBaseline.tsx. TDD em scripts/tf1011-tdd.py. Debug v0.0.78: chave `contraditorios` não inicializada.
-
----
-## Histórico — T-F1-010 (concluída em 2026-09-27)
-- implementada em v0.0.76; aprovado; aprendizado:AP-2026-09-27-2205.
-
----
-## Histórico — T-F1-006 (concluída em 2026-09-27)
-- implementada em v0.0.74–75; aprovado ("Funcionou"); aprendizado:AP-2026-09-27-1830.
-
----
-## Histórico — T-F1-008 (concluída em 2026-09-25)
-- implementada v0.0.63; debugs/emendas v0.0.64–v0.0.73; aprendizado:AP-2026-09-25-0940 + AP-2026-09-25-0941.
-
----
-## Histórico — T-F1-007 (concluída em 2026-09-24)
-- implementada v0.0.58; debug v0.0.60; badge v0.0.62; aprendizado:AP-2026-09-23-2015.
+## Histórico — T-F1-012 / T-F1-009 / T-F1-011 / T-F1-010 / T-F1-008 / T-F1-007
+- T-F1-012 (29/09, v0.0.88–91 com emenda toast 12s) · T-F1-009 (29/09, v0.0.79–87; prova do consultor 11/11) · T-F1-011 (baseline/qualidade de dados; debug v0.0.78) · T-F1-010 (27/09, v0.0.76) · T-F1-008 (25/09, v0.0.63–73) · T-F1-007 (24/09, v0.0.58–62).
