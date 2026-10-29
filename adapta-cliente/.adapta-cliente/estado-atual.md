@@ -1,22 +1,31 @@
 # Estado atual — Adapta Cliente
 
-- task_id: T-F3-001 (definir conteúdo aprovado: estrutura da proposta e do folder, fontes e donos — SPEC-3-001, onda 1, única elegível)
+- task_id: T-F3-002 (migrar e aprovar o conteúdo piloto, com pendências nomeadas — SPEC-3-001, onda 2)
 - champion: Fábio
 - spec: 04_fase-atual/specs/spec-3-001-conteudo-aprovado.md
-- etapa: concluida
-- autorizacao_implementacao: confirmada (2026-10-28, formulário "Enviar respostas": "Sim, implementar o plano" + 6 blocos da proposta + 5 blocos do folder + gestor/admin aprova todos os blocos + três fontes declaradas por bloco)
-- teste_humano: aprovado com 2 considerações (2026-10-28: "Concluí o teste e tudo deu certo, com 2 considerações" — falta de mensagem visível de bloco aprovado e ausência de selo de cor); emenda autorizada no formulário ("Aplicar as duas correções e depois concluir")
-- verificacao_automatica: passou (TDD CP-F3-001/002/003 32/32 PASS na v0.0.166; QA Skip completo OK em v0.0.165, 166, 168, 169, 170 e 171; prova na tela admin/vendedor: selo verde aprovado + confirmação na linha "✓ Rascunho salvo" + vendedor vê 1 item)
-- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-28-1600-estado-aprovado-no-create.md
-- ultima_acao: T-F3-001 CONCLUÍDA (28/10) — aceite do champion "Concluí o teste e tudo deu certo" + emenda v0.0.170–171 aplicada e provada na tela (selo com cor semântica; confirmação na própria linha com título correto); limpeza dos registros de prova; fase.md [x]; STATUS 1/9; changelog v24
-- proxima_acao: aguardar o champion pedir a próxima task (T-F3-002 — migrar e aprovar o conteúdo piloto, prazo 05/11)
-- atualizado_em: 2026-10-28T16:05:00-03:00
+- etapa: aguardando_teste_humano
+- autorizacao_implementacao: confirmada (2026-10-29, mensagem: "Sim, mas tenha atenção nos alertas para o cliente (células destacadas em verde) e nas etapas da entrega do projeto. Note também que o cliente deve retornar a proposta assinada, com destaque para as amostras que ele aprovou.")
+- teste_humano: pendente
+- verificacao_automatica: passou (TDD CP-F3-002/003 22/22 PASS na v0.0.175; QA Skip completo OK em v0.0.172, 173, 174 e 175)
+- aprendizado: pendente
+- ultima_acao: T-F3-002 implementada (29/10) — 8 blocos + campos de conferência; 5 blocos migrados do PDF Proposta 2026-0212 com ZERO divergências; alertas verdes e as 20 etapas preservados; amostras + assinatura no bloco de próximos passos; 2 achados reais corrigidos (JSONField []byte)
+- proxima_acao: apresentar o roteiro de teste humano ao champion e aguardar o aceite
+- atualizado_em: 2026-10-29T17:05:00-03:00
 
 ---
 ## Fechamento da Fase 2 (26/10)
 - Revisão do consultor (Ramon Pádua): 8/8 evidências e aceites conferidos no repositório; D1/D2 do handoff da Fase 1 já aprovadas pelo champion (02/10); check-fase-2.md assinado com active-sha256=8dde9b94f42953c2581aec9ead1852c03e7c37596062593a75b6f513f556fbdf.
 - Evoluções candidatas ADIADAS: política de faturamento mínimo (pode ser criada depois; comparação segue em revisao_de_preco) e exceção de piso POR PEDIDO (entra com a política I6). Exceção da trilha segue como alteração com alçada do admin.
 - Fase 2 arquivada em 05_entregas/fase-2/ (fase.md, 4 SPECs, README, manifesto adapta-phase-closure/v1 e check).
+
+---
+## Decisões do champion — T-F3-002 (29/10)
+- A proposta atual (PDF Proposta Comercial 2026-0212, cliente Lotcare) é **ponto de partida**, não modelo final: está obsoleta e com visual ruim, será reformulada.
+- Conteúdo novo desejado: **propósito do projeto** · **por que da linha oferecida** · **matérias-primas de cada produto e o que elas fazem** · **procedimentos que podem ser feitos com os produtos**.
+- Estrutura da proposta passa de 6 para **8 blocos** (+ `materias_primas`, + `procedimentos`).
+- Atenção às **células destacadas em verde** (títulos de alerta ao cliente) e às **etapas da entrega do projeto**.
+- O cliente deve **retornar a proposta assinada, com destaque para as amostras que aprovou**.
+- Texto de teste PROP-0019 substituído pela Capa real (virou histórico `substituido`).
 
 ---
 ## Decisões do champion — T-F3-001 (28/10, formulário de autorização)
@@ -34,7 +43,7 @@
 
 ---
 ## Insumos do champion (T-F2-005)
-- I5 componentes = formulação (custo da Cotação) + Anvisa + serviços adicionais da tabela jan-2025 (Lacre 0,60 · Montagem caixa 2,50 · Rotulagem 0,60 · Celofane 1,00), cada um com nome, valor e impacto — transparência para vendedor e cliente
+- I5 componentes = formulação (custo da Cotação) + Anvisa + serviços adicionais da tabela jan-2025 (Lacre 0,60 · Montagem caixa 2,50 · Rotulagem 0,60 · Celofane 1,00), cada um com nome, valor e impacto
 - ANVISA = UMA VEZ POR PRODUTO (correção do champion 20/10): R$ 450,00 por produto na tabela jan-2025, nunca diluído por quantidade; serviços adicionais SIM por unidade
 - Emenda 20/10 (autorizada): a Cotação grava mao_de_obra e anvisa (por produto) no item ao confirmar a seleção (v0.0.142, provado na tela)
 - I6 ainda SEM política cadastrada → comparação nasce em revisao_de_preco
