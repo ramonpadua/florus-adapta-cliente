@@ -3,14 +3,14 @@
 - task_id: T-F3-002 (migrar e aprovar o conteúdo piloto, com pendências nomeadas — SPEC-3-001, onda 2)
 - champion: Fábio
 - spec: 04_fase-atual/specs/spec-3-001-conteudo-aprovado.md
-- etapa: aguardando_teste_humano
+- etapa: concluida
 - autorizacao_implementacao: confirmada (2026-10-29, mensagem: "Sim, mas tenha atenção nos alertas para o cliente (células destacadas em verde) e nas etapas da entrega do projeto. Note também que o cliente deve retornar a proposta assinada, com destaque para as amostras que ele aprovou.")
-- teste_humano: pendente
-- verificacao_automatica: passou (TDD CP-F3-002/003 22/22 PASS na v0.0.175; QA Skip completo OK em v0.0.172, 173, 174 e 175)
-- aprendizado: pendente
-- ultima_acao: T-F3-002 implementada (29/10) — 8 blocos + campos de conferência; 5 blocos migrados do PDF Proposta 2026-0212 com ZERO divergências; alertas verdes e as 20 etapas preservados; amostras + assinatura no bloco de próximos passos; 2 achados reais corrigidos (JSONField []byte)
-- proxima_acao: apresentar o roteiro de teste humano ao champion e aguardar o aceite
-- atualizado_em: 2026-10-29T17:05:00-03:00
+- teste_humano: aprovado (2026-10-29, "Sim, pode concluir a T-F3-002" após teste nos dois papéis: admin 5 aprovado / 2 rascunho / 1 pendente; vendedor apenas os 5 aprovados com pendentes "sem versão")
+- verificacao_automatica: passou (revalidação de encerramento TDD CP-F3-002/003 22/22 PASS + 11/11 PASS do zero na v0.0.176; QA Skip completo OK em v0.0.172, 173, 174, 175 e 176)
+- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-10-29-2115-jsonfield-byte-e-confirmacao-na-tela.md
+- ultima_acao: T-F3-002 CONCLUÍDA (29/10) — aceite do champion após teste nos dois papéis; revalidação de encerramento TDD 22/22 + 11/11 PASS; emenda v0.0.176 (Limpar seleção no campo Fonte + rótulo do Motivo); fase.md [x]; STATUS 2/9; changelog v26
+- proxima_acao: aguardar o champion pedir a próxima task (T-F3-003 — montar a proposta a partir do catálogo, prazo 10/11)
+- atualizado_em: 2026-10-29T21:15:00-03:00
 
 ---
 ## Fechamento da Fase 2 (26/10)
@@ -26,6 +26,7 @@
 - Atenção às **células destacadas em verde** (títulos de alerta ao cliente) e às **etapas da entrega do projeto**.
 - O cliente deve **retornar a proposta assinada, com destaque para as amostras que aprovou**.
 - Texto de teste PROP-0019 substituído pela Capa real (virou histórico `substituido`).
+- **Aceite do teste (29/10):** "Sim, pode concluir a T-F3-002" — após conferir os dois papéis (admin: 5 aprovado / 2 rascunho / 1 pendente; vendedor: só os 5 aprovados, pendentes "sem versão").
 
 ---
 ## Decisões do champion — T-F3-001 (28/10, formulário de autorização)
