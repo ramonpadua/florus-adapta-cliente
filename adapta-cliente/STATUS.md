@@ -20,3 +20,13 @@
 | Precondições específicas de canal, CRM, papéis, eventos, fontes e métricas | 2026-08-20 | Responsáveis indicados nas SPECs | Confirmar antes da execução de cada task; parar sem inventar regra ou acesso |
 | Sistema travado até "Necessidade de investimento para esse projeto" | 2026-08-26 | Fábio (champion) | Não alterar Dados do Cliente, Endereço, Contato, Avaliação do Pedido e Resumo de Investimento sem ordem direta |
 | Lógica da Cotação congelada | 2026-09-16 | Fábio (champion) | Não alterar filtro por categoria, bloqueio por ambiguidade, alertas e cálculo do custo unitário sem ordem direta |
+
+## Nota de ajuste documental — 2026-10-30
+
+- Ajuste **somente documental**, autorizado por Ramon (consultor): as tasks abertas da Fase 3 (T-F3-003
+  a T-F3-008 e a revisão do consultor) foram reescritas em linguagem leiga no `04_fase-atual/fase.md`
+  (commit `176210e`) e os SPECs 3-002, 3-003 e 3-004 receberam a emenda **E-F3-20261030-01**, com o
+  mesmo contrato de interação válido só para as tasks abertas. `AGENTS.md` e `CLAUDE.md` receberam o
+  protocolo equivalente.
+- **Progresso inalterado: 2/9 (22%)** — nenhuma task nova, nenhuma concluída, nenhum aceite novo,
+  nenhuma mudança nas Fases 1 e 2. O app não foi alterado.

@@ -97,3 +97,34 @@ O vendedor abre o pedido, gera a proposta em um clique: blocos aprovados preench
 
 - T-F3-003 (onda 3)
 - T-F3-004 (onda 4)
+
+## Emenda E-F3-20261030-01 (30/10/2026) — contrato de interação das tasks abertas
+
+**Vale só para as tasks abertas da Fase 3** (T-F3-003 a T-F3-008 e a revisão do consultor). Não altera
+nada das Fases 1 e 2, não reabre task concluída e não muda critério de aceite, prazo nem responsável.
+A emenda existe porque o `04_fase-atual/fase.md` foi reescrito em linguagem leiga em 30/10/2026
+(commit `176210e`) e o texto da task passou a ser o contrato que vale na conversa com o champion.
+
+**Ordem da explicação, em qualquer task aberta:** primeiro o que **já existe** (e que não deve ser
+pedido de novo), depois o que **vai existir no Skip**, depois **por que é útil**. Só então a pergunta.
+
+**Coleta no Maestro:** uma pergunta por vez, no chat do Maestro, e **só sobre o que falta** — o que já
+está nos documentos, nas respostas anteriores ou no sistema não é perguntado outra vez. Anexo que o
+champion mandar fica no Maestro e não é repassado por WhatsApp nem por e-mail.
+
+**Antes de construir:** conferir a fonte de cada informação e **pedir autorização** ao champion,
+mostrando o que vai ser montado; sem o "ok" nada é construído. Informação sem fonte aprovada vira
+pendência com nome e dono — nunca é preenchida no silêncio, e nenhuma regra, número, benefício ou
+rótulo de tela é inventado (se o rótulo não foi conferido, a ação é descrita pelo resultado).
+
+**Prova:** roteiro humano passo a passo com os rótulos como aparecem na tela e o resultado esperado de
+cada passo; uma task por vez, com o aceite do champion antes da próxima. Nenhum envio a cliente real
+sem confirmação na hora.
+
+**Nesta SPEC (T-F3-003 e T-F3-004):** a proposta piloto é **personalizada para o projeto** — o champion
+informa a linha de atuação ou o tipo de cliente, o entendimento do problema, os ativos e materiais que
+podem ser citados e a função de quem recebe. **Toda informação técnica só entra com fonte aprovada.**
+O conteúdo já migrado do PDF Proposta 2026-0212 (alertas verdes e as 20 etapas) **não é pedido de novo
+nem recriado**; a montagem parte do pedido, do catálogo com preço vigente e do motor de investimento
+que já existem. As decisões RN-3.005 a RN-3.008 e os critérios CA-3-007 a CA-3-011 continuam valendo
+sem alteração.
