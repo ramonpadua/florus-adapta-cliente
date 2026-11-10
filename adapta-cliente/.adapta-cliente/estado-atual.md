@@ -1,16 +1,34 @@
 # Estado atual — Adapta Cliente
 
-- task_id: nenhuma (T-F3-003 concluída em 2026-10-30)
+- task_id: T-F3-004
 - champion: Fábio
 - spec: 04_fase-atual/specs/spec-3-002-montagem-proposta.md
 - etapa: concluida
-- autorizacao_implementacao: confirmada (2026-10-29 21:36, formulário; MODIFICAÇÃO: condições padrão 80% no aceite + 20% no término, alteração só com aprovação de gestor)
-- teste_humano: aprovado (2026-10-30 21:39, formulário: "Sim, consigo editar os quatro campos" + "Deu certo. Pode seguir.")
-- verificacao_automatica: passou (revalidação de encerramento do zero: TDD 56/56 PASS; critérios CA-3-007/008/010 21/21 PASS; QA Skip OK na v0.0.185)
-- aprendizado: capturado:memory/SOUL.md (marcador {{...}} e "edite onde a pessoa olha") + changelog v30/v31 + relatório de entrega
-- ultima_acao: T-F3-003 CONCLUÍDA — v0.0.185; fase.md [x]; STATUS 3/9 (33%); changelog com aceite e correção do script de prova; proposta de prova 2026-0026 limpa e a do champion (2026-0017) restaurada
-- proxima_acao: aguardar decisão do champion sobre iniciar a T-F3-004 (revisão, versão e rollback da proposta)
-- atualizado_em: 2026-10-30T21:45:00-03:00
+- autorizacao_implementacao: confirmada (2026-11-02 20:47)
+- teste_humano: aprovado em 2026-11-10 ("Aparentemente, tudo está da maneira como você descreveu", com imagem da tela) após 2 rodadas; 1ª rodada reprovou 3 pontos de tela, corrigidos na v0.0.189
+- verificacao_automatica: TDD 32/32 PASS + QA Skip OK na v0.0.189
+- aprendizado: capturado — SOUL.md (histórico de linhagem filtra por raiz; bloco que cresce esconde o resto) + changelog
+- ultima_acao: T-F3-004 concluída; STATUS 4/9 (44%); fase.md marcado [x]
+- proxima_acao: T-F3-005 (folder da Fase 3) — pedir autorização ao champion antes de analisar/implementar
+- atualizado_em: 2026-11-10T18:05:00-03:00
+
+---
+## Teste humano T-F3-004 — 1ª rodada (10/11) e o que mudou na v0.0.189
+
+O champion apontou três pontos; **os três eram defeito de TELA, não de lógica**:
+
+1. **"Não achei 'Ações da proposta'."** O bloco existia, mas ficava **abaixo** de uma tabela de 25
+   linhas e saía da área visível.
+2. **"Não achei a tabela 'Histórico desta proposta'."** A tabela existia — mas listava as propostas
+   de **todas as linhagens do pedido** de prova, não a da proposta aberta (25 linhas, incluindo
+   linhagens de execuções anteriores do TDD e as marcadas `LIMPEZA-PROVA-TF3004`).
+3. **"Só aparecem 2 versões no seletor: V1 e V3."** Listava só as vigentes; a v2 substituída sumia.
+
+Correções na v0.0.189: histórico por **raiz de linhagem** (`proposta_origem`) com a versão aberta
+marcada "← aberta"; seletor com a **linhagem inteira** marcando as substituídas; abrir substituída
+entra em **modo consulta** (aviso + sem botões que escrevem); tabela com altura máxima e rolagem.
+
+**2ª rodada: APROVADA em 10/11** com imagem da tela confirmando os três blocos. TDD 32/32 PASS.
 
 ---
 ## Teste humano T-F3-003 — 1ª rodada (30/10) e o que mudou
@@ -59,6 +77,13 @@ TDD 10/10 PASS.
 ## Fechamento da Fase 2 (26/10)
 - Revisão do consultor (Ramon Pádua): 8/8 evidências e aceites conferidos; D1/D2 já aprovadas pelo champion (02/10); check-fase-2.md assinado.
 - Evoluções adiadas: política de faturamento mínimo (I6) e exceção de piso POR PEDIDO.
+
+---
+## Decisões do champion — T-F3-004 (02/11)
+- Quem cria nova versão / edita: **vendedor dono + gestor/admin**.
+- Quem marca como revisada: **vendedor dono + gestor/admin**.
+- Quem volta para a última versão: **gestor/admin**.
+- O que a versão nova traz: **remontar com o pedido e o catálogo do momento**.
 
 ---
 ## Decisões do champion — T-F3-003 (29/10)
