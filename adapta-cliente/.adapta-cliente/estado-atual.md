@@ -1,13 +1,13 @@
 # Estado atual — Adapta Cliente
 
-- task_id: T-F3-006
+- task_id: T-F3-007
 - champion: Fábio
-- spec: 04_fase-atual/specs/spec-3-004-envio-auditoria-alcadas.md
+- spec: 04_fase-atual/specs/spec-3-004-envio-auditoria-alcadas.md (auditoria/RLS) + padrão T-F2-007 (fail-closed)
 - etapa: aguardando_teste_humano
-- autorizacao_implementacao: confirmada 2026-11-23T11:30-03:00 — champion respondeu "Pode seguir" ao plano da T-F3-006 (envio manual registrado + confirmação de recebimento como ato único)
+- autorizacao_implementacao: confirmada 2026-11-23T13:52-03:00 — champion respondeu "Sim" ao plano da T-F3-007 (correção do evento genérico, cobertura de auditoria, fail-closed provado e tela da trilha com CSV)
 - teste_humano: pendente
-- verificacao_automatica: passou — TDD 38/38 PASS (CA-3-017…022 + alçadas + retenção + ordem); QA Skip OK v0.0.204; tela conferida no preview logado
+- verificacao_automatica: passou — TDD 27/27 PASS (CA-3-023…028); QA Skip OK v0.0.206; tela da trilha conferida no preview logado
 - aprendizado: pendente
-- ultima_acao: T-F3-006 implementada em v0.0.201–204 — migration 0041 (coleção `envios`, 2 alçadas), hook `registro_envios.js`, tela EnvioPainel com botão "Envios" no menu. Defeito corrigido: documento_versao gravava 0 (getString em campo number). Limpeza por ID concluída. **Cenário de demonstração pronto para o teste: proposta 2026-0075 em `revisada`** (pedido DEMO-ENVIO, cliente fictício).
-- proxima_acao: aguardar o teste humano do champion no envio (registrar envio + confirmar recebimento)
-- atualizado_em: 2026-11-23T11:50:00-03:00
+- ultima_acao: T-F3-007 implementada em v0.0.206 — corrigida a auditoria de pedidos (44 campos com de→para, sem evento quando nada muda; antes eram 9 e 50 eventos ficaram sem campo), tela TrilhaAuditoria com filtros e CSV sanitizado, botão "Trilha" no menu. TDD 27/27 PASS. Pedidos de prova arquivados por ID.
+- proxima_acao: aguardar o teste humano da trilha de auditoria; depois resta a T-F3-008 (demonstração do fluxo completo) e a revisão do consultor
+- atualizado_em: 2026-11-23T14:10:00-03:00
