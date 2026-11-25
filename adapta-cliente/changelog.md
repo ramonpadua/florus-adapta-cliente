@@ -1,1 +1,14 @@
-__PLACEHOLDER__
+# Registro de alterações
+
+## Registro
+
+- 2026-11-25 · [champion Fábio] · **Task T-F3-008 concluída** — demonstração do fluxo completo com caso real (v0.0.216–219). Aceite: "Aprovada, com as pendências registradas". **Caso:** Maria Erotides SA — pedido **20260929-0003** ("Linha para careca"), acompanhamento só do Fábio. **Sete etapas aceitas uma a uma:** pedido → 3 vínculos aprovados → proposta **2026-0077** (R$ 42.500,00: produção R$ 41.150,00 + ANVISA R$ 1.350,00, 450 por produto cobrado uma vez) → proposta revisada → envio **ENV-2026-0012** (WhatsApp, Maria) → folder FOLD-2026-0011 montado com 111 produtos e 5 pendências de conteúdo nomeadas → trilha de **14 eventos** exportada em CSV sanitizado. **Quatro defeitos reais encontrados executando, todos corrigidos com autorização dele:** (1) **ordem invertida** — amostra bloqueava revisão e envio, porque eu tratei lote/validade como pré-requisito de uma proposta que serve para mostrar o **valor**; o champion corrigiu a ordem do processo comercial (proposta → aprovação dos valores → amostra → teste → aceite) e as três pendências de amostra viraram alerta (v0.0.216 + migration **0043**); (2) **ações de rascunho desapareciam sem explicação** quando a proposta virava revisada — o champion não achou os três botões e anexou print; era **falha de roteiro minha**, não de tela, mas a tela passou a dizer por que eles não aparecem e onde fica *Criar nova versão* (v0.0.217); (3) **envio duplicado aceito** para a mesma pessoa — a idempotência compara `destinatario` **texto livre** e "Maria Erotides" ≠ "Maria — Gerente de Compras (+55 11 …)"; criada a ação **`marcar_duplicado`** (motivo ≥10, fail-closed, auditada) que marca sem apagar, com ENV-2026-0011 marcado e ENV-2026-0012 válido (v0.0.218); (4) **o envio não aparecia na trilha do pedido** — o evento era gravado sem `pedido_id_ref`; hook corrigido e migration **0044** preencheu os antigos por **evidência de instante** (8 de 28; **20 deixados intactos por ambiguidade real** de TDD, porque palpite em trilha é pior que lacuna visível), sem tocar em autor, hora, antes/depois, motivo ou resultado (v0.0.219). Prova: migrations conferidas como `applied` no schema, prova negativa (motivo curto → 400; ação inexistente → 400), trilha em tela de 10 → 14 eventos. **Pendências registradas:** conteúdo dos 5 blocos de folder (Marketing/Produtos·Comercial/Regulatório), amostras reais no aceite, furo da idempotência por texto livre (decisão pendente) e 20 eventos de TDD sem referência. Relatório: `05_entregas/T-F3-008-demonstracao-fluxo-completo.md`. Fase 3: **8/9 (89%)**.
+
+## Nota sobre a divisão do registro
+
+O registro completo, íntegro, está em `changelog-historico/`:
+
+- `changelog-historico/2026-11.md` — novembro/2026 (T-F3-004 a T-F3-008)
+- `changelog-historico/2026-08-a-10.md` — agosto a outubro/2026 (Fases 1 e 2)
+
+A divisão é técnica: a publicação no repositório falha acima de ~18 KB por arquivo, e o registro único passava de 32 KB. **Nada foi removido ou resumido** — o conteúdo foi distribuído. Este arquivo mantém as entradas mais recentes.
