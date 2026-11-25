@@ -17,13 +17,13 @@ Cada linha é uma tarefa da Jornada de Execução. **O detalhe narrativo de cada
 
 ## Tarefas
 
-- [ ] Criar a próxima ação depois do envio e a fila de oportunidades @Fábio !01/12/2026 <!-- id:f4b2c3d6-0001-4b02-8a02-000000000001 -->
+- [x] Criar a próxima ação depois do envio e a fila de oportunidades @Fábio !01/12/2026 <!-- id:f4b2c3d6-0001-4b02-8a02-000000000001 -->
   > Task T-F4-001 (SPEC-4-001, onda 1, única elegível). O que já existe e está decidido: o envio da proposta e do folder é registrado (quem enviou, para quem, quando, qual versão — Fase 3), a confirmação de recebimento é um ato único e a trilha de auditoria exporta tudo em planilha. O que vai existir no Skip: quando uma proposta é enviada, ela ganha no mesmo momento uma PRÓXIMA AÇÃO — o que acontece agora, quem faz e até quando — e entra numa FILA de oportunidades enviadas que o gestor abre e vê quem está parado; quem passou do prazo combinado (SLA) fica destacado, sem que ninguém precise lembrar.
   > Por que é útil: hoje o registro diz que a proposta saiu, mas não diz o que vem depois; proposta esfriada só aparece quando alguém lembra de abrir o caderno.
   > Regra da fase, dita pelo escopo: o follow-up NÃO envia mensagem, não negocia, não desqualifica e não fecha sozinho — ele organiza; o vendedor age no WhatsApp e registra o resultado no sistema.
   > O que falta saber com você (uma pergunta por vez, no Maestro): quantos dias sem resposta contam como "atrasado" (o SLA padrão) e quem vê a fila — só gestor e admin, ou o time todo. Como a conversa funciona: fase e tarefa ditas antes de perguntar, leitura do que já está respondido, uma pergunta de cada vez, anexos aqui. Não invento prazo, regra nem número.
   > Teste humano: roteiro passo a passo com os rótulos conferidos na tela — envio registrado → próxima ação criada → fila mostrando a oportunidade → atraso destacado — terminando no seu aceite. Uma etapa por vez.
-  > Depende de: T-F3-006 e T-F3-008 (o envio registrado e a demonstração com caso real já provados na Fase 3).
+  > Depende de: T-F3-006 e T-F3-008 (o envio registrado e a demonstração com caso real já provados na Fase 3). **Concluída 26/11 — `05_entregas/T-F4-001-proxima-acao-fila-oportunidades.md`.**
 
 - [ ] Lembrete, adiamento com motivo, encerramento e reabertura @Fábio !03/12/2026 <!-- id:f4b2c3d6-0002-4b02-8a02-000000000002 -->
   > Task T-F4-002 (SPEC-4-001, onda 2). O que já existe: a próxima ação nasce do envio e a fila mostra quem está parado (T-F4-001). O que vai existir no Skip: o lembrete da próxima ação aparece para o dono dela; adiar exige motivo e fica na trilha (nada some em silêncio); encerrar uma oportunidade de follow-up exige motivo; e o que foi encerrado pode ser reaberto, com o histórico inteiro preservado.
