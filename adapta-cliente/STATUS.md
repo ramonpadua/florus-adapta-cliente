@@ -1,12 +1,13 @@
 # STATUS — Projeto Florus Brasil — Processo Comercial
 
-> **Atualizado em:** 2026-11-25 (Fase 3 fechada + Fase 4 liberada) · **Por:** consultoria Adapta
+> **Atualizado em:** 2026-11-26 (T-F4-001 concluída, v0.0.227) · **Por:** consultoria Adapta
 
 **Repo do cliente:** https://github.com/fnavaar/florus-adapta-cliente
 
 ## Onde estamos
 
-- **Fase atual:** 4 — Follow-up, amostra, cobrança, aceite e handoffs · **liberada em 2026-11-25** · **0 das 9 tasks** · próxima: **T-F4-001** (próxima ação depois do envio e fila de oportunidades)
+- **Fase atual:** 4 — Follow-up, amostra, cobrança, aceite e handoffs · **liberada em 2026-11-25** · **1 das 9 tasks (11%)** · próxima: **T-F4-002** (lembrete, adiamento com motivo, encerramento e reabertura)
+- **26/11/2026 — T-F4-001 CONCLUÍDA (v0.0.227):** o envio passou a gerar a **próxima ação** da proposta (o quê, quem, até quando) e a **fila de oportunidades** entrou no menu (botão *Fila*). **Insumos decididos pelo champion:** SLA padrão de **3 dias** contado do envio (configurável, troca auditada com de→para) e fila com **gestor/admin vendo tudo e vendedor vendo só as dele**. Prova: **revalidação 21/21 PASS** + TDD 18/18; migration **0045** conferida como aplicada no schema; prova em tela da fila com a Maria Erotides SA (FU-2026-0001, prazo 28/11/2026, 0 atrasadas). Aceite do champion: "Deu tudo certo". Relatório: `05_entregas/T-F4-001-proxima-acao-fila-oportunidades.md`.
 - **25/11/2026 — FASE 3 FECHADA FORMALMENTE + FASE 4 LIBERADA:** revisão do consultor (Ramon Pádua) concluída — 8/8 evidências e aceites do champion conferidos no repositório (T-F3-001 28/10 a T-F3-008 25/11); check com active-sha256=0e2f0042bd34b01654cb834d95a5852458c45a64069cd22991b51a0fc3e90199; Fase 3 arquivada em `05_entregas/fase-3/` com manifesto; fase.md da Fase 4 com 9 tasks e 4 SPECs publicadas; STATUS 0/9.
 - **Pendências herdadas da Fase 3 (com dono, viram insumo das tasks da Fase 4):** conteúdo dos 5 blocos do folder (P1 — champion/marketing/regulatório; o folder monta e lista, mas não aprova); amostras reais da Maria (P2 — vendedor, no aceite); **idempotência de envio por texto livre (P3 — vira a T-F4-007)**; 20 eventos de TDD sem referência (P4 — interno, ambiguidade real); 3 blocos complementares da proposta (P5 — alerta).
 - **Decisões confirmadas no fechamento da Fase 3:** ordem do processo comercial corrigida pelo champion (proposta → aprovação dos valores → amostra → teste → aceite; lote/validade como alerta, migration 0043); envio manual registrado (o vendedor baixa e envia pelo WhatsApp, o sistema registra); confirmação de recebimento como ato único; DataCrazy desativado quando o Skip estiver pronto.
@@ -26,6 +27,7 @@
 
 | Task | Data | Entrega | Evidência |
 |---|---|---|---|
+| T-F4-001 | 26/11/2026 | Próxima ação nascida do envio e fila de oportunidades com idade, prazo e destaque de atraso; SLA de 3 dias configurável e auditável; gestor vê tudo, vendedor vê as dele | Revalidação 21/21 + TDD 18/18 PASS, migration 0045 conferida no schema, prova em tela (`05_entregas/T-F4-001-proxima-acao-fila-oportunidades.md`) |
 | T-F3-008 | 25/11/2026 | Demonstração do fluxo completo com caso real (Maria Erotides SA): pedido → vinculação aprovada → proposta R$ 42.500,00 → revisão → envio registrado → folder com pendências → trilha em planilha | Migrations 0043/0044 conferidas + prova negativa 400 + trilha 14 eventos (`05_entregas/T-F3-008-demonstracao-fluxo-completo.md`) |
 | T-F3-007 | 23/11/2026 | Trilha de auditoria consultável com filtros e CSV sanitizado; correção de defeito real (eventos de edição sem campo nem antes/depois) | TDD 27/27 + revalidação 13/13 PASS, QA OK v0.0.207 (`05_entregas/T-F3-007-permissao-auditoria.md`) |
 | T-F3-006 | 23/11/2026 | Envio registrado com confirmação de recebimento: entrega manual declarada, confirmação como ato único, idempotência, fail-closed e painel de enviadas sem confirmação | TDD 38/38 PASS, QA OK v0.0.204 (`05_entregas/T-F3-006-envio.md`) |
