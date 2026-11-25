@@ -1,13 +1,19 @@
 # Estado atual — Adapta Cliente
 
-- task_id: T-F3-008
+- task_id: T-F4-001 (criar a próxima ação depois do envio e a fila de oportunidades — SPEC-4-001, onda 1, única elegível)
 - champion: Fábio
-- spec: 04_fase-atual/fase.md (task T-F3-008, onda 8) — não há SPEC própria; a task é a demonstração do fluxo
-- etapa: concluida
-- autorizacao_implementacao: confirmada 24/11/2026 — "Autorizo" (importar os 4 produtos) e "Sim, corrija agora" (fail-open)
-- teste_humano: aprovado TOTAL 25/11/2026 17:07 — "Aprovada, com as pendências registradas" (as 7 etapas do ensaio no caso real 20260929-0003, aceitas uma a uma)
-- verificacao_automatica: passou — migrations 0043 e 0044 conferidas como applied no schema; proposta 2026-0077 pendencias_envio=[] e estado=revisada; ENV-2026-0012 gravado; prova negativa 400 para motivo curto e acao inexistente; trilha do pedido 10 -> 14 eventos (v0.0.216-219)
-- aprendizado: capturado:05_entregas/T-F3-008-demonstracao-fluxo-completo.md (seção 8)
-- ultima_acao: T-F3-008 concluida em 25/11 — ensaio no caso real com 4 defeitos reais corrigidos (ordem da amostra v0.0.216+0043, acoes de rascunho explicadas v0.0.217, marcar_duplicado v0.0.218, trilha do envio v0.0.219+0044). Relatorio em 05_entregas/T-F3-008-demonstracao-fluxo-completo.md; changelog, STATUS (8/9) e fase.md atualizados
-- proxima_acao: nenhuma nesta task — T-F3-008 CONCLUÍDA; a Fase 3 segue para a revisão do consultor (Ramon Pádua), que confere evidências e decide o fechamento
-- atualizado_em: 2026-11-25T17:10:00-03:00
+- spec: 04_fase-atual/specs/spec-4-001-followup-proxima-acao.md
+- etapa: a_fazer
+- autorizacao_implementacao: pendente (aguardando "Sim" do champion na task T-F4-001)
+- teste_humano: pendente (gate do champion ao fim da task)
+- verificacao_automatica: pendente (TDD CP-F4-001 na execução)
+- aprendizado: n/a — transição de fase registrada no changelog
+- ultima_acao: FASE 3 FECHADA FORMALMENTE + FASE 4 LIBERADA (25/11) — revisão do consultor concluída (8/8 evidências e aceites conferidos; check com active-sha256=0e2f0042bd34b01654cb834d95a5852458c45a64069cd22991b51a0fc3e90199); Fase 3 arquivada em 05_entregas/fase-3/ com manifesto; fase.md da Fase 4 com 9 tasks e 4 SPECs publicadas; STATUS 0/9; changelog com as entradas de fechamento e liberacao.
+- proxima_acao: champion executa T-F4-001 (próxima ação nascida do envio + fila de oportunidades; insumos embutidos: SLA padrão e visibilidade da fila; prazo 01/12)
+- atualizado_em: 2026-11-25T21:05:00-03:00
+
+---
+## Fechamento da Fase 3 (25/11)
+- Revisão do consultor (Ramon Pádua): 8/8 evidências e aceites conferidos no repositório; ensaio do fluxo completo com caso real (Maria Erotides SA) aprovado etapa por etapa em 25/11; check-fase-3.md assinado com active-sha256=0e2f0042bd34b01654cb834d95a5852458c45a64069cd22991b51a0fc3e90199.
+- Pendências com dono que seguem: P1 conteúdo dos 5 blocos do folder (champion/marketing/regulatório), P2 amostras reais da Maria (vendedor, no aceite), P3 idempotência de envio por texto livre (consultor + champion — vira T-F4-007), P4 20 eventos de TDD sem referência (interno), P5 3 blocos complementares da proposta (alerta).
+- Fase 3 arquivada em 05_entregas/fase-3/ (fase.md, 4 SPECs com a emenda E-F3-20261030-01, README, manifesto adapta-phase-closure/v1 e check).

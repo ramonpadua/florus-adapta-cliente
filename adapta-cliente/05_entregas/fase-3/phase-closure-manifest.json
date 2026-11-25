@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "adapta-phase-closure/v1",
+  "phase": 3,
+  "closedAt": "2026-11-25T21:00:00.000Z",
+  "activeDigest": "0e2f0042bd34b01654cb834d95a5852458c45a64069cd22991b51a0fc3e90199",
+  "files": [
+    {
+      "relative": "README.md",
+      "sha256": "76c5c0226df10c8fa3ba653547c1a6d1d6e559561388902e14b71bf10cb7bf85"
+    },
+    {
+      "relative": "check-fase-3.md",
+      "sha256": "52eab55b2adb6e6fcb5fc29d2500aeb1a1ff16ae8c89cb4c217de1618f1ada37"
+    },
+    {
+      "relative": "fase.md",
+      "sha256": "178a56b7355fab76e585c0dc6ffae432e63771c0e08e9ba24bde79eabd6a21f0"
+    },
+    {
+      "relative": "specs/00-INDICE.md",
+      "sha256": "b2b80024604863a87d51e166c2d89d1eaa303cee956895b4469138a419cb57a4"
+    },
+    {
+      "relative": "specs/spec-3-001-conteudo-aprovado.md",
+      "sha256": "be9c94953b90a097743ac0e44b81ba7f23158021271e1c9c20d0d0470c71d1a8"
+    },
+    {
+      "relative": "specs/spec-3-002-montagem-proposta.md",
+      "sha256": "6dda64a1d31e521bfb6065b7c20e43f016cfa9f18d3bf8fd07e7bf71048406c7"
+    },
+    {
+      "relative": "specs/spec-3-003-folder-blocos-aprovados.md",
+      "sha256": "1685cd5f2c83c28f3fcb2c8124e556d3746340209ecbaa007258a5f5f2fb8fb5"
+    },
+    {
+      "relative": "specs/spec-3-004-envio-auditoria-alcadas.md",
+      "sha256": "07aca1f6f7a893c4fc42c9fd919f27a16da58b1c32c065cf3a0f356a7c6e9443"
+    }
+  ],
+  "checkSha256": "52eab55b2adb6e6fcb5fc29d2500aeb1a1ff16ae8c89cb4c217de1618f1ada37",
+  "manifestDrift": []
+}

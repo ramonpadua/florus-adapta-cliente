@@ -1,36 +1,46 @@
 {
   "schemaVersion": "adapta-cliente-handoff/v1",
-  "phase": 2,
+  "phase": 4,
   "versions": {
     "package": "0.1.0",
     "adapta": "0.7.0",
     "adaptaCliente": "0.2.0"
   },
-  "generatedAt": "2026-10-02T21:22:09.703Z",
+  "generatedAt": "2026-11-25T21:00:00.000Z",
   "files": [
     {
+      "path": "04_fase-atual/README.md",
+      "sha256": "57843f15414253dfbcc46b12fc0860f4aa0481fefdd8440eca68b80a3663f4cc",
+      "classification": "template-publico"
+    },
+    {
       "path": "04_fase-atual/fase.md",
-      "sha256": "457b453a82fc20c5ec3f412338a5f1e955a811e7f76bcd6fec3e7aca90e85cd8",
+      "sha256": "3c15cff4c71befb141a0bef6d27ce346871689f7889d1b68ba55cebd6bcbca17",
       "classification": "fase-atual"
     },
     {
-      "path": "04_fase-atual/specs/spec-2-001-cadastro-governado.md",
-      "sha256": "fc96e82ff9f06702d62c5fd8dc31d2ceb788c655d768c39ee1d30dc792c59605",
+      "path": "04_fase-atual/specs/00-INDICE.md",
+      "sha256": "2d3bbda15bc5cbc834cd2fac5771207f034294468c81318069abffc6b102b2c6",
+      "classification": "template-publico"
+    },
+    {
+      "path": "04_fase-atual/specs/spec-4-001-followup-proxima-acao.md",
+      "sha256": "dd11e572b79fd374e6eaa528ed5af47ec95e8bad85a4fe24de59a4872bf292f5",
       "classification": "spec-fase-atual"
     },
     {
-      "path": "04_fase-atual/specs/spec-2-002-composicao-lote.md",
-      "sha256": "ca5f73d096a43707ac7163b2ab354c331550addea6bebe47ed7a70f612c83c6a",
+      "path": "04_fase-atual/specs/spec-4-002-amostra-cobranca-conciliacao.md",
+      "sha256": "22cf184f5229a1d02ee210d78c8df0fd98c16805acb119fab3815b584b5514ce",
       "classification": "spec-fase-atual"
     },
     {
-      "path": "04_fase-atual/specs/spec-2-003-investimento-preco.md",
-      "sha256": "9619fe21c776ae0e7e71be01932cb5bcde68bac9ee2259766e921c02b2d45105",
+      "path": "04_fase-atual/specs/spec-4-003-handoff-pacote-minimo.md",
+      "sha256": "df437c6ef261161265a643117250249a7677dc7284e2c892b7af3b0fab07aaf8",
       "classification": "spec-fase-atual"
     },
     {
-      "path": "04_fase-atual/specs/spec-2-004-governanca-calculadora.md",
-      "sha256": "662c608316c8f3e27338ad9306f3334d52deb318ae8bfce86b0f3e03918ab432",
+      "path": "04_fase-atual/specs/spec-4-004-idempotencia-demonstracao.md",
+      "sha256": "e44949c50003bf5a9224f2120f4e61e8898e696d8c6ea34c612f388647899a35",
       "classification": "spec-fase-atual"
     }
   ]
